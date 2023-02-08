@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Constraint layout is more flexible and powerful than linear layout for complex UI-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InstructionFragment">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_horizontal_margin"
+            android:layout_marginTop="@dimen/text_vertical_margin"
+            android:text="@string/shoe_instruction"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/article_horizontal_margin"
+            android:layout_marginTop="@dimen/article_top_margin"
+            android:layout_marginEnd="@dimen/article_end_margin"
+            android:padding="@dimen/fragment_padding"
+            android:text="@string/shoe_instruction_contents"
+            android:textSize="@dimen/article_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <Button
+            android:id="@+id/check_shoe_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_layout_top"
+            android:text="@string/check_shoe_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

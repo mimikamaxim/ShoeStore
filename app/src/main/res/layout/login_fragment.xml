@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!--Constraint layout is more flexible and powerful than linear layout for complex UI-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/fragment_margin"
+        android:paddingTop="@dimen/fragment_margin"
+        android:paddingRight="@dimen/fragment_margin"
+        android:paddingBottom="@dimen/fragment_margin"
+        tools:context=".LoginFragment">
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/input_margin_start"
+            android:text="@string/email"
+            app:layout_constraintBaseline_toBaselineOf="@+id/username"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/input_margin_start"
+            android:text="@string/password"
+            app:layout_constraintBaseline_toBaselineOf="@+id/password"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/input_margin_top"
+            android:layout_marginEnd="@dimen/input_margin_end"
+            android:autofillHints="Email"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/input_margin_start"
+            android:layout_marginTop="@dimen/input_margin_top"
+            android:layout_marginEnd="@dimen/input_margin_end"
+            android:layout_marginBottom="@dimen/input_margin_bottom"
+            android:autofillHints="Password"
+            android:hint="@string/prompt_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/password_label"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="@dimen/button_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/button_layout_margin_start"
+            android:layout_marginEnd="@dimen/button_layout_margin_end"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/action_sign_in_short"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_label"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="@dimen/button_layout_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/signup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
